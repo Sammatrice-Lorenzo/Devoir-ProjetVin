@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 
 namespace ProjetMetier
@@ -18,18 +19,33 @@ namespace ProjetMetier
         public void AjouterCave(string unNomDeCave,List<Bouteille> lesBouteillesDeLaCave)
         {
             // A vous de jouer
+            LesCaves.Add(unNomDeCave,lesBouteillesDeLaCave);
         }
 
         public int NbBouteilles(string unNomDeCave)
         {
             // A vous de jouer
-            return 0;
+            int nbBouteilles = 0;
+         
+           
+            if(lesCaves.Keys.Equals(unNomDeCave))
+            {
+                nbBouteilles = lesCaves.Keys.Count;
+            }
+        
+            
+
+            return nbBouteilles;
         }
 
         public int NbBouteillesDeRouges(string unNomDeCave)
         {
             // A vous de jouer
-            return 0;
+            int nbBouteillesDeRouges = 0;
+            int nbBouteilles = NbBouteilles(LesCaves.Keys.ToString());
+            
+            
+            return nbBouteillesDeRouges;
         }
 
         public double ValeurDeLaCave(string unNomDeCave)
