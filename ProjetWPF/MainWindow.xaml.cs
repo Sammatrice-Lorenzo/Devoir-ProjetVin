@@ -137,7 +137,8 @@ namespace ProjetWPF
             {
                 lvBouteilles.ItemsSource = gst.LesCaves[lvCaves.SelectedItem as string];
             }
-            txtNbBouteilles.Text = gst.NbBouteilles();
+            //txtNbBouteilles.Text = gst.NbBouteilles();
+            txtNbBouteillesDeRouges.Text = (gst.NbBouteillesDeRouges(gst.LesCaves.Values).ToString());
 
         }
 
